@@ -1,0 +1,3 @@
+ resource "aws_db_security_group" "bad_example" {
+   # ...
+ }

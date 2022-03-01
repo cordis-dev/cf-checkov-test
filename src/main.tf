@@ -1,30 +1,9 @@
-resource "aws_s3_bucket" "s3_bucket" {
-  bucket = var.bucket_name
+ variable "password" {
+   description = "The root password for our VM"
+   type        = string
+   default     = "p4ssw0rd"
+ }
 
-  acl    = "public-read"
-  policy = <<EOF
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": [
-                "s3:GetObject"
-            ],
-            "Resource": [
-                "arn:aws:s3:::${var.bucket_name}/*"
-            ]
-        }
-    ]
-}
-EOF
-
-  website {
-    index_document = "index.html"
-    error_document = "error.html"
-  }
-
-  tags = var.tags
-}
+ resource "evil_corp" "virtual_machine" {
+    root_password = var.password
+ }

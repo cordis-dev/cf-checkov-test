@@ -11,20 +11,4 @@
      ]
    }
  ]
- EOF
-
- }
- [
-   {
-     "name": "my_service",
-     "essential": true,
-     "memory": 256,
-     "environment": [
-       { "name": "ENVIRONMENT", "value": "development" },
-       { "name": "DATABASE_PASSWORD", "value": "oh no D:"}
-     ]
-   }
- ]
- EOF
-
  }

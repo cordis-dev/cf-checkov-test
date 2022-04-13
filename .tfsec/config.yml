@@ -1,5 +1,6 @@
 ---
 exclude:
+  - aws-cloudfront-enforce-https
   - aws-api-gateway-enable-access-logging
   - aws-api-gateway-enable-cache-encryption
   - aws-api-gateway-enable-tracing
